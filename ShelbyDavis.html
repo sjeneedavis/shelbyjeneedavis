@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherYes</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    .body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="search"] {
+  width: 50%;
+  padding: 12px 12px;
+  margin: 10px 10px 50px 225px;
+  box-sizing: border-box;
+  border: 2px solid rgb(230, 187, 123);
+  background-color: white;
+  color: darksalmon;
+}
+h1,
+h2 {
+  color: darksalmon;
+  text-align: center;
+  line-height: 20px;
+}
+.col {
+  margin: 50px 50px;
+  font-size: 30px;
+  color: rgb(158, 100, 81);
+}
+
+.weatherborder {
+  border: solid rgba(233, 150, 122, 0.504);
+  border-radius: 10px 10px;
+  margin: 10px 10px;
+  border-width: 10px;
+}
+.container3 {
+  margin: 200px 20px 60px;
+}
+.cardw {
+  background-color: rgba(229, 217, 185, 0.496);
+  margin: 30px 30px;
+  border-radius: 20px;
+}
+.cardo {
+  background-color: rgba(226, 144, 119, 0.364);
+  margin: 30px 30px;
+  border-radius: 20px;
+}
+.cardi {
+  background-color: rgba(211, 233, 233, 0.432);
+  margin: 30px 30px;
+  border-radius: 20px;
+}
+.cardin {
+  background-color: rgba(148, 89, 71, 0.351);
+  margin: 30px 30px;
+  border-radius: 20px;
+}
+.bi-plus-square-fill {
+  color: rgb(190, 80, 43);
+}
+
+  </head>
+  <body>
+    <body background= "min.jpeg">
+    <div class="container">
+      <div class="weather-app">
+          <form class="search-form" id="search-form">
+        <input type="text" 
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+        
+      </form>
+      <h1> <span id="city">Grand Rapids, MI 19</span>
+        <span class="temperature" id="temperature"></span
+          ><span class="units">°C</span>
+      </h1>
+      <h1 id="date"></li>
+    <div class="container1">
+  <div class="row">
+    <div class="col"> 
+      M
+      <br>
+      75° F
+      
+    </div>
+    <div class="col">
+    T
+    <br>
+    68° F 
+    </div>
+    <div class="col">
+      W
+      <br>
+    50° F 
+    </div>
+    <div class="col">
+      Th
+      <br>
+    88° F 
+    </div>
+    <div class="col">
+      F
+      <br>
+    78° F 
+    </div>
+  </div>
+</div>
+    <div class="container2">
+  <div class="row">
+    <div class="col">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-sun" viewBox="0 0 16 16">
+  <path d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.502 3.502 0 0 1 7 8zm4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"/>
+  <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129zm4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377zM14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+</svg>
+    </div>
+    <div class="col">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+    </div>
+    <div class="col">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-lightning-rain" viewBox="0 0 16 16">
+  <path d="M2.658 11.026a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-7.5 1.5a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-.753-8.499a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973zM8.5 1a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 1zM7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724l1-2z"/>
+</svg>
+    </div>
+    <div class="col">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+    </div>
+    
+    <div class="col">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-fog2" viewBox="0 0 16 16">
+  <path d="M8.5 4a4.002 4.002 0 0 0-3.8 2.745.5.5 0 1 1-.949-.313 5.002 5.002 0 0 1 9.654.595A3 3 0 0 1 13 13H.5a.5.5 0 0 1 0-1H13a2 2 0 0 0 .001-4h-.026a.5.5 0 0 1-.5-.445A4 4 0 0 0 8.5 4zM0 8.5A.5.5 0 0 1 .5 8h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z"/>
+</svg>
+    </div>
+  </div>
+</div>
+    </div>
+    </span>
+    <div class="container3">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+</svg> <a href="https://www.michigan.gov/miready/be-informed/tornadoes">Click here to learn more about Tornadoes</a>
+<br>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+</svg> <a href="https://www.michigan.org/article/trip-idea/spend-day-beautiful-west-michigan-beaches"> Click here to learn more about the beaches of West Michigan</a>
+<br>
+</div>
+  <div class="container4">
+ <div class="row" >
+  <div class="col-sm-6">
+    <div class="cardw">
+      <div class="card-body">
+        <h5 class="card-title">Wisconsin</h5>
+        <p class="card-text">Discover the weather in new places</p>
+        <a href="#" class="btn btn-primary">Take me there</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="cardo">
+      <div class="card-body">
+        <h5 class="card-title">Ohio</h5>
+        <p class="card-text">Discover the weather in new places</p>
+        <a href="#" class="btn btn-primary">Take me there</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6">
+    <div class="cardi">
+      <div class="card-body">
+        <h5 class="card-title">Illinois</h5>
+        <p class="card-text">Discover the weather in new places</p>
+        <a href="#" class="btn btn-primary">Take me there</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="cardin">
+      <div class="card-body">
+        <h5 class="card-title">Indiana</h5>
+        <p class="card-text">Discover the weather in new places</p>
+        <a href="#" class="btn btn-primary">Take me there</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  function formatDate(date) {
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let dayIndex = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[dayIndex];
+
+  return `${day} ${hours}:${minutes}`;
+}
+
+function displayWeatherCondition(response) {
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+}
+
+function search(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#city");
+  let cityInput = document.querySelector("#city-input");
+  cityElement.innerHTML = cityInput.value;
+}
+
+function searchCity(city) {
+  let apiKey = "e6175ae92f1a73253e6832c67e2a26fe";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+function searchLocation(position) {
+  let apiKey = "e6175ae92f1a73253e6832c67e2a26fe";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+searchCity("Grand Rapids");
+
+</script>
+</body>
+</html>
+
